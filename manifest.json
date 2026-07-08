@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "ommogle cheat",
+  "version": "1.0",
+  "description": "hack",
+  "permissions": [
+    "<all_urls>",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "ommogle cheat"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["inject.js"]
+}
